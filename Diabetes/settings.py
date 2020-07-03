@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['eradicatediabetes.herokuapp.com']
 
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'Diabetes.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'EradicateDiabetes',
+        'NAME': os.environ.get('DATABASE_NAME'),
         'USER': 'postgres',
-        'PASSWORD': 'pythondjango',
-        'HOST': 'database-1.coojxzxmb58g.us-east-2.rds.amazonaws.com',
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+        'HOST': os.environ.get('DATABASE_HOST'),
         'PORT': '5432'
     }
 }
