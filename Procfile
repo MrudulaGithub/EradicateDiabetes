@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath Diabetes.wsgi --log-file -
+web: gunicorn Diabetes.wsgi
