@@ -26,7 +26,7 @@ class PatientMedicalConditionForm(forms.ModelForm):
             'gender': forms.RadioSelect,
             'ethnicity': forms.Select(attrs={'class': 'form-control'}),
 
-            'height': forms.TextInput(attrs={'placeholder': 'in Meters', 'class': 'form-control'}),
+            'height': forms.TextInput(attrs={'placeholder': 'in Centimeters', 'class': 'form-control'}),
             'weight': forms.TextInput(attrs={'placeholder': 'in Kgs', 'class': 'form-control'}),
             'diabetes_type': forms.RadioSelect,
             'conditions': forms.CheckboxSelectMultiple,

@@ -6,7 +6,7 @@
 <img src="{% static 'eradicate/images/EDsmall.jfif' %}"><br><br>
 <h2>Eradicate Diabetes Diet</h2><br>
 
-<h5>Here is your customised diet plan</h5><br>
+<h5>Here is your customised diet plan, Please click on the Email button below </h5><br>
 
 <form action="{% url 'eradicate:dietplan' patient_id %}" method="post">
 {% csrf_token %}
