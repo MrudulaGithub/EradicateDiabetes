@@ -90,16 +90,16 @@ def dietplan(request, patient_id):
         msg.attach('My_Diet.pdf', pdf, 'application/pdf')
 
         if fasting == fasting_yes:
-            msg.attach_file('eradicate\static\eradicate\pdf\Safe Fasting.pdf')
+            msg.attach_file('eradicate/static/eradicate/pdf/Safe Fasting.pdf')
             if patient_hist.diet_type == 'N':
-                msg.attach_file('eradicate\static\eradicate\pdf\LCHF Eradicate Diabetes .pdf')
+                msg.attach_file('eradicate/static/eradicate/pdf/LCHF Eradicate Diabetes .pdf')
             else:
-                msg.attach_file('eradicate\static\eradicate\pdf\LFV Eradicate Diabetes.pdf')
+                msg.attach_file('eradicate/static/eradicate/pdf/LFV Eradicate Diabetes.pdf')
         else:
             if patient_hist.diet_type == 'N':
-                msg.attach_file('eradicate\static\eradicate\pdf\LCHF Eradicate Diabetes .pdf')
+                msg.attach_file('eradicate/static/eradicate/pdf/LCHF Eradicate Diabetes .pdf')
             else:
-                msg.attach_file('eradicate\static\eradicate\pdf\LFV Eradicate Diabetes.pdf')
+                msg.attach_file('eradicate/static/eradicate/pdf/LFV Eradicate Diabetes.pdf')
 
         msg.send()
         messages.success(request, 'Thank you, an email with your diet has been sent to you')
