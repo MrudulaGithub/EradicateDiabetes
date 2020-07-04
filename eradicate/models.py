@@ -42,7 +42,7 @@ class PatientMedicalCondition(PatientBasicInfo):
         return patienthist
 
     def checkFasting(self):
-        bmi = float(round((self.weight / (self.height*100) ** 2), 2))
+        bmi = float(round((self.weight / (self.height/100) ** 2), 2))
         if (bmi <= 20) or 'kidney' in self.conditions:
             show = 'Based on your Medical History ,you should not be Fasting'
             return show  # False
